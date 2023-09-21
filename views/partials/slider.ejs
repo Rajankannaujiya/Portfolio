@@ -1,0 +1,45 @@
+<div class="container mt-4">
+
+  <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+
+      <% for (var key in slides){ %>
+          <!-- getting the index of the elment one by one and the class-->
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<%=slides.indexOf(slides[key])%>" class="<%= slides[key].class %>"
+        aria-current="true" aria-label="Slide 1"></button>
+
+        <% } %>
+      <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button> -->
+    </div>
+    <div class="carousel-inner">
+
+
+      <% for (var key in slides){ %>
+        <div class="carousel-item <%= slides[key].class %>">
+          <img src="<%= slides[key].imageUrl %>" class="d-block w-100 slider-image" alt="my image">
+
+          <div class="carousel-caption d-none d-md-block" style="color:rgb(16, 0, 0);
+          font-weight: bolder;">
+            <h3><%= slides[key].title %> </h3>
+            <p><%= slides[key].subTitle %></p>
+          </div>
+        </div>
+
+        <% } %>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
