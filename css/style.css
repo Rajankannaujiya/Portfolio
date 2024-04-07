@@ -5,11 +5,13 @@ body,html {
     background-color:rgb(222, 222, 230);
     font-family: 'Poppins', sans-serif;
     color: white;
-    min-height: 100%;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
 
+}
+.mainContainer{
+    height: 100vh;
 }
 
 .slider-image {

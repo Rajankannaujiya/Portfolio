@@ -72,12 +72,10 @@ mongoose.connect("mongodb://127.0.0.1:27017/website_dynamic");
 
 
 
-
-// template engine setting
 app.set("views", "views");
 app.set("view engine", "ejs");
 
 
 app.listen(port, () => {
-    console.log(`server started at port ${port}`)
+    console.log(`server started at localhost port ${port}`)
 })

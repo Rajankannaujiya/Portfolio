@@ -56,5 +56,4 @@ router.post("/process_contact", async (req, res) => {
    }
 });
 
-
 module.exports = router;
